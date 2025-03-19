@@ -9,7 +9,6 @@ package warcardgroup7;
  * @author khali_jwhe8us
  */
 abstract class User {
-
     protected String username;
     protected String password;
     
