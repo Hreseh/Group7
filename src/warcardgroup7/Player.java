@@ -4,13 +4,32 @@
  */
 package warcardgroup7;
 
-import java.util.List;
+import java.util.*;
+
 
 /**
  *
  * @author khali_jwhe8us
  */
 public class Player {
-    String name;
-    List<Card> hand;
+
+     public Queue<Card> hand = new LinkedList<>();
+    
+    public Player(String username, String password) {
+        super(username, password);
+    }
+    
+    public void addCard(Card card) {
+        hand.offer(card); 
+    }
+    public Card drawCard() {
+        return hand.poll(); 
+    }
+    public int getHandSize() {
+        return hand.size();
+    }
+    public boolean hasCards() {
+        return !hand.isEmpty(); 
+    }
+   
 }
