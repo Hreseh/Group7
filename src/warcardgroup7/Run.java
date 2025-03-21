@@ -10,7 +10,7 @@ import java.util.*;
  */
 public class Run {
     
-public static void start(){
+    public static void start(){
         Scanner scanner = new Scanner(System.in);
         
         System.out.println("Enter Player 1 Username: ");
@@ -49,5 +49,6 @@ public static void start(){
         
         WarGame game = new WarGame(p1, p2, maxRounds);
         game.play();
-}
+    }
+    
 }

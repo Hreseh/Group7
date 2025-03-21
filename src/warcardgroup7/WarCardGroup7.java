@@ -10,10 +10,10 @@ package warcardgroup7;
  */
 public class WarCardGroup7 {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
-          Run.start();
-    
+        Run.start();
+          
+    }
 }
+

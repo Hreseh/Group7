@@ -9,13 +9,24 @@ package warcardgroup7;
  * @author khali_jwhe8us
  */
 public class Card {
-    public enum Suit
-   {
-        HEARTS, CLUBS,SPADES, DIAMONDS
+    private final Rank rank;
+    private final Suit suit;
+    
+    public Card(Rank rank, Suit suit) {
+        this.rank = rank;
+        this.suit = suit;
     }
     
-    public enum Value
-   {
-       ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING
+    public Rank getRank() { 
+        return rank; 
     }
+    public int getValue() { 
+        return rank.getValue(); 
+    }
+    
+    @Override
+    public String toString() {
+        return rank + " of " + suit;
+    }
+    
 }
