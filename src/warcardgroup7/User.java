@@ -11,17 +11,13 @@ package warcardgroup7;
 abstract class User {
     protected String username;
     protected String password;
-    
+
     public User(String username, String password) {
-        if (PasswordValidator.isValid(password)) {
-            this.username = username;
-            this.password = password;
-        } else {
-            throw new IllegalArgumentException("Invalid password! Password must be at least 6 characters long and contain at least one uppercase letter.");
-        }
+        this.username = username;
+        this.password = password;
     }
-    public String getUsername() { 
-        return username; 
+
+    public String getUsername() {
+        return username;
     }
-    
 }

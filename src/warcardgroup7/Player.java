@@ -14,23 +14,23 @@ package warcardgroup7;
 
 import java.util.*;
 public class Player extends User {
-    public Queue<Card> hand = new LinkedList<>();
-    
+    private Queue<Card> hand = new LinkedList<>();
+
     public Player(String username, String password) {
         super(username, password);
     }
-    
-    public void addCard(Card card) {
+
+    public void addCard(Card card) { 
         hand.offer(card); 
     }
     public Card drawCard() {
         return hand.poll(); 
     }
-    public int getHandSize() {
-        return hand.size();
+    public boolean hasCards() { 
+        return !hand.isEmpty();
     }
-    public boolean hasCards() {
-        return !hand.isEmpty(); 
+    public int getHandSize() {
+        return hand.size(); 
     }
     
 }

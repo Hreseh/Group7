@@ -12,17 +12,16 @@ import java.util.List;
  * @author khali_jwhe8us
  */
 public class Victory {
-    
     private int maxRounds;
-    
+
     public Victory(int maxRounds) {
         this.maxRounds = maxRounds;
     }
-    
+
     public boolean isGameOver(List<Player> players, int round) {
         return round >= maxRounds || players.stream().anyMatch(p -> p.getHandSize() == 52);
     }
-    
+
     public Player getWinner(List<Player> players) {
         return players.stream().max(Comparator.comparingInt(Player::getHandSize)).orElse(null);
     }

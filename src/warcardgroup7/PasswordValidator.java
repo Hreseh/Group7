@@ -10,8 +10,11 @@ package warcardgroup7;
  */
 public class PasswordValidator {
     
-        public static boolean isValid(String password) {
-        return password.length() >= 6 && password.matches(".*[A-Z].*");
-    }
+    public static boolean isValid(String password) {
+    return password.length() >= 6 &&
+           password.chars().anyMatch(Character::isUpperCase) &&
+           password.chars().anyMatch(Character::isDigit);
+}
+    
     
 }

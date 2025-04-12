@@ -12,16 +12,12 @@ import java.util.*;
  * @author khali_jwhe8us
  */
 public class HandGenerator {
-    
-    public static void distributeHands(List<Card> deck, Player p1, Player p2) {
-        Collections.shuffle(deck);
-        for (int i = 0; i < deck.size(); i++) {
-            if (i % 2 == 0) {
-                p1.addCard(deck.get(i));
-            } else {
-                p2.addCard(deck.get(i));
-            }
-        }
+        public static void distributeHands(List<Card> deck, Player p1, Player p2) {
+    Collections.shuffle(deck);
+    for (int i = 0; i < deck.size(); i++) {
+        if (i % 2 == 0) p1.addCard(deck.get(i));
+        else p2.addCard(deck.get(i));
     }
-   
+}
+    
 }

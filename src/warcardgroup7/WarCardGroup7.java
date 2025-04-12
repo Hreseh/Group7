@@ -12,8 +12,10 @@ public class WarCardGroup7 {
 
 
     public static void main(String[] args) {
-        Run.start();
-          
+        GameView view = new GameView();
+        GameController controller = new GameController(view);
+        controller.startGame();
     }
 }
+
 
