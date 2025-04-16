@@ -5,9 +5,10 @@
 package warcardgroup7;
 
 /**
- *
+
  * @author khali_jwhe8us
  */
+//demo 
 public class User {
     private String name;
     private String password;
